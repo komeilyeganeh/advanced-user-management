@@ -12,7 +12,7 @@ export const routes: RouteObject[] = [
         element: <Dashboard />,
         handle: {
             title: 'Dashboard',
-            icon: <MdDashboard size={28}/>,
+            icon: <MdDashboard size={25}/>,
             showInSidebar: true,
         }
     },
@@ -21,7 +21,7 @@ export const routes: RouteObject[] = [
         element: <Users />,
         handle: {
             title: 'Users',
-            icon: <FaUsers size={28}/>,
+            icon: <FaUsers size={25}/>,
             showInSidebar: true,
         }
     },

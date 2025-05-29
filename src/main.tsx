@@ -6,13 +6,19 @@ import "@mantine/core/styles.css"
 import './assets/styles/index.css'
 import { BrowserRouter } from 'react-router'
 
+function Root() {
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <MantineProvider>
-        <App />
-      </MantineProvider>
-    </BrowserRouter>
-  </StrictMode>,
-)
+
+  // return jsx
+  return (
+    <StrictMode>
+      <BrowserRouter>
+        <MantineProvider defaultColorScheme="light">
+          <App />
+        </MantineProvider>
+      </BrowserRouter>
+    </StrictMode>
+  )
+}
+
+createRoot(document.getElementById('root')!).render(<Root />)

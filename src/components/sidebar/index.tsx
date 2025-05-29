@@ -2,12 +2,14 @@ import { routes } from "@/routes"
 import { Box, Text } from "@mantine/core"
 import { NavItem } from "@/components/nav-item"
 import { useLocation } from "react-router"
+import { FC } from "react"
+import { SidebarProps } from "@/types/ui/sidebar.type"
 
-export const Sidebar = () => {
+export const Sidebar: FC<SidebarProps> = ({isSidebarOpen}) => {
     const location = useLocation();
     // return jsx
     return (
-        <Box className="flex flex-col h-full overflow-hidden w-72 bg-gray-900 p-4 items-center">
+        <Box className={`absolute flex flex-col h-full w-64 duration-200 overflow-hidden bg-gray-800 dark:bg-neutral-900 p-4 items-center ${isSidebarOpen ? "left-0" : "-left-64"}`}>
             {/* title */}
             <Box>
                 <Text fw={700} c="cyan" fz={20}>USER-DASHBOARD</Text>
